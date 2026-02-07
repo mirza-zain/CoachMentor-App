@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import ActiveTasks from "../Components/ActiveTasks";
 import AgenticBox from "../Components/AgenticBox";
+import { CircleUser } from "lucide-react-native";
 
 export default function () {
   const insets = useSafeAreaInsets();
@@ -15,15 +16,14 @@ export default function () {
     >
       <View className="flex-row justify-between items-center mx-5 my-10">
         <View>
-          <Text className="text-lg font-semibold text-[#0A0A0A] mb-2">
-            SYSTEM 2.4
+          <Text className="text-base font-semibold text-[#0A0A0A] mb-2">
+            Coaching Buddy
           </Text>
-          <Text className="text-4xl font-bold text-[#0A0A0A]">Buddy Coach</Text>
+          <Text className="text-4xl font-bold text-[#0A0A0A] mb-2">Hey Mate,</Text>
+          <Text className="text-indigo-700 font-bold text-base bg-indigo-200 w-[35] text-center rounded-xl">PRO</Text>
         </View>
-        <View className="bg-indigo-200 px-4 py-2 rounded-full">
-          <Text className="text-indigo-700 font-bold text-base">
-            PRO SYSTEM
-          </Text>
+        <View className="">
+          <CircleUser size={32} />
         </View>
       </View>
       <AgenticBox />

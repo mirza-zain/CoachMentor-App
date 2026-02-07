@@ -43,7 +43,7 @@ export default function TabLayout() {
           title: "Home",
           tabBarIcon: ({ color, size, focused }) => (
             <View style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}>
-              <Ionicons name={focused ? "home" : "home-outline"} size={size} color={color} />
+              <Ionicons name={focused ? "cube" : "cube-outline"} size={size} color={color} />
             </View>
           ),
         }}
@@ -60,12 +60,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="UpgradeScreen"
+        name="HistoryScreen"
         options={{
-          title: "Upgrade",
+          title: "History",
           tabBarIcon: ({ color, size, focused }) => (
             <View style={{ transform: [{ scale: focused ? 1.2 : 1 }] }}>
-              <Ionicons name={focused ? "flash" : "flash-outline"} size={size} color={color} />
+              <Ionicons name={focused ? "time" : "time-outline"} size={size} color={color} />
             </View>
           ),
         }}

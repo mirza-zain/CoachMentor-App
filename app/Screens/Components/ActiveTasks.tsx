@@ -1,4 +1,4 @@
-import { Circle } from "lucide-react-native";
+import { Circle, CirclePlus } from "lucide-react-native";
 import { useState } from "react";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -9,27 +9,16 @@ export default function ActiveTasks() {
       id: 1,
       title: "Review Weekly System",
     },
-    {
-      id: 2,
-      title: "Start Learning Mobile Dev",
-    },
-    {
-      id: 3,
-      title: "Complete Practicing German",
-    },
-    {
-      id: 4,
-      title: "Complete Practicing Turkish",
-    },
-    {
-      id: 5,
-      title: "Complete Practicing Coding",
-    }
   ];
 
   return (
     <View className="mt-8 mx-5 pb-2" style={{ flex: 1 }}>
-      <Text className="text-2xl font-bold mb-4">Active Tasks</Text>
+      <View className="flex-row justify-between items-center mb-2">
+        <Text className="text-2xl font-bold">Active Focus</Text>
+        <Pressable >
+          <CirclePlus size={25} />
+        </Pressable>
+      </View>
       <FlatList
         data={tasks}
         keyExtractor={(item) => item.id.toString()}
